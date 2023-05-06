@@ -34,15 +34,9 @@ class _SplashScreenState extends State<SplashScreen> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('School', style: Theme.of(context).textTheme.headline5),
-                Text('Brain', style: Theme.of(context).textTheme.headline5),
+                Text('Applicant', style: Theme.of(context).textTheme.headline5),
+                Text('Helper', style: Theme.of(context).textTheme.headline5),
               ],
-            ),
-            Image.asset(
-              'assets/images/splash.png',
-              //25% of height & 50% of width
-              height: 25.h,
-              width: 50.w,
             ),
           ],
         ),

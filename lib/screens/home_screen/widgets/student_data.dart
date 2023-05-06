@@ -9,7 +9,7 @@ class StudentName extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('Привет ', style: Theme.of(context).textTheme.subtitle1),
+        Text('Привет, ', style: Theme.of(context).textTheme.subtitle1),
         Text(studentName, style: Theme.of(context).textTheme.subtitle1),
       ],
     );

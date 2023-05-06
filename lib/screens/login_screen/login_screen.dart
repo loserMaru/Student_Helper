@@ -43,17 +43,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Hi Student',
+                      Text('Привет, абитуриент!',
                           style: Theme.of(context).textTheme.subtitle1),
-                      Text('Sign in to continue',
+                      Text('Войдите, для продолжения',
                           style: Theme.of(context).textTheme.subtitle2),
                       sizedBox,
                     ],
-                  ),
-                  Image.asset(
-                    'assets/images/splash.png',
-                    height: 20.h,
-                    width: 40.w,
                   ),
                   SizedBox(
                     height: kDefaultPadding / 2,
@@ -86,14 +81,14 @@ class _LoginScreenState extends State<LoginScreen> {
                                   HomeScreen.routeName, (route) => false);
                             }
                           },
-                          title: 'SIGN IN',
+                          title: 'Войти',
                           iconData: Icons.arrow_forward_outlined,
                         ),
                         sizedBox,
                         Align(
                           alignment: Alignment.bottomRight,
                           child: Text(
-                            'Forgot Password',
+                            'Забыл пароль?',
                             textAlign: TextAlign.end,
                             style: Theme.of(context)
                                 .textTheme
@@ -121,18 +116,18 @@ class _LoginScreenState extends State<LoginScreen> {
       keyboardType: TextInputType.emailAddress,
       style: kInputTextStyle,
       decoration: InputDecoration(
-        labelText: 'Mobile Number/Email',
+        labelText: 'Эл. почта',
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
       validator: (value) {
         //for validation
         RegExp regExp = new RegExp(emailPattern);
         if (value == null || value.isEmpty) {
-          return 'Please enter some text';
+          return 'Пожалуйста, заполните это поле';
           //if it does not matches the pattern, like
           //it not contains @
         } else if (!regExp.hasMatch(value)) {
-          return 'Please enter a valid email address';
+          return 'Почта указана неверно';
         }
       },
     );
@@ -145,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
       keyboardType: TextInputType.visiblePassword,
       style: kInputTextStyle,
       decoration: InputDecoration(
-        labelText: 'Password',
+        labelText: 'Пароль',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: IconButton(
           onPressed: () {
@@ -163,7 +158,7 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       validator: (value) {
         if (value!.length < 5) {
-          return 'Must be more than 5 characters';
+          return 'Не меньше 5 символов';
         }
       },
     );

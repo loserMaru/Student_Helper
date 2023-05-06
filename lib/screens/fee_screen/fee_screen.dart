@@ -12,7 +12,7 @@ class FeeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fee'),
+        title: Text('Документы'),
       ),
       body: Column(
         children: [
@@ -48,7 +48,7 @@ class FeeScreen extends StatelessWidget {
                             child: Column(
                               children: [
                                 FeeDetailRow(
-                                  title: 'Receipt No',
+                                  title: 'Требуемые документы',
                                   statusValue: fee[index].receiptNo,
                                 ),
                                 SizedBox(
@@ -58,17 +58,17 @@ class FeeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 FeeDetailRow(
-                                  title: 'Month',
+                                  title: 'Паспорт',
                                   statusValue: fee[index].month,
                                 ),
                                 sizedBox,
                                 FeeDetailRow(
-                                  title: 'Payment Date',
+                                  title: 'Аттестат',
                                   statusValue: fee[index].date,
                                 ),
                                 sizedBox,
                                 FeeDetailRow(
-                                  title: 'Status',
+                                  title: 'Фотография',
                                   statusValue: fee[index].paymentStatus,
                                 ),
                                 sizedBox,
@@ -79,18 +79,16 @@ class FeeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 FeeDetailRow(
-                                  title: 'Total Amount',
-                                  statusValue: fee[index].totalAmount,
+                                  title: 'Награды',
+                                  statusValue: fee[index].btnStatus,
+                                ),
+                                FeeDetailRow(
+                                  title: 'Льготы',
+                                  statusValue: fee[index].lgot,
                                 ),
                               ],
                             ),
                           ),
-                          FeeButton(
-                              title: fee[index].btnStatus,
-                              iconData: fee[index].btnStatus == 'Paid'
-                                  ? Icons.download_outlined
-                                  : Icons.arrow_forward_outlined,
-                              onPress: () {})
                         ],
                       ),
                     );

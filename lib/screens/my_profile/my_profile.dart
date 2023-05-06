@@ -11,7 +11,7 @@ class MyProfileScreen extends StatelessWidget {
     return Scaffold(
       //app bar theme for tablet
       appBar: AppBar(
-        title: Text('My Profile'),
+        title: Text('Мой Профиль'),
         actions: [
           InkWell(
             onTap: () {

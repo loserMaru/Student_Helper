@@ -33,13 +33,10 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         StudentName(
-                          studentName: 'Медвед',
-                        ),
+                          studentName: 'абитуриент' + '!',
+                        ), // 'Class X-II A | Roll no: 12'),
                         kHalfSizedBox,
-                        StudentClass(
-                            studentClass: 'Группа X-II'), // 'Class X-II A | Roll no: 12'),
-                        kHalfSizedBox,
-                        StudentYear(studentYear: '2022-2023'),
+                        StudentYear(studentYear: '2023-2024'),
                       ],
                     ),
                     kHalfSizedBox,
@@ -60,16 +57,17 @@ class HomeScreen extends StatelessWidget {
                       onPress: () {
                         //go to attendance screen
                       },
-                      title: 'Посещение\n   занятий',
-                      value: '90.02%',
+                      title: 'Сумма баллов\n          ЕГЭ',
+                      value: '190',
                     ),
                     StudentDataCard(
                       onPress: () {
                         //go to fee due screen
-                        Navigator.pushNamed(context, FeeScreen.routeName);
+                        Navigator.pushNamed(
+                            context, AssignmentScreen.routeName);
                       },
-                      title: ' Оплата\nобучения',
-                      value: '53899\₽',
+                      title: ' Возможные\n       ВУЗы',
+                      value: '4',
                     ),
                   ],
                 )
@@ -94,33 +92,17 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/quiz.svg',
-                          title: 'Пройти тест',
-                        ),
-                        HomeCard(
                           onPress: () {
                             //go to assignment screen here
-                            Navigator.pushNamed(
-                                context, AssignmentScreen.routeName);
+                            Navigator.pushNamed(context, FeeScreen.routeName);
                           },
                           icon: 'assets/icons/assignment.svg',
-                          title: 'Задания',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/holiday.svg',
-                          title: 'Праздники',
+                          title: 'Документы',
                         ),
                         HomeCard(
                           onPress: () {},
                           icon: 'assets/icons/timetable.svg',
-                          title: 'Расписание',
+                          title: 'Новости',
                         ),
                       ],
                     ),
@@ -137,9 +119,17 @@ class HomeScreen extends StatelessWidget {
                             Navigator.pushNamed(
                                 context, DateSheetScreen.routeName);
                           },
-                          icon: 'assets/icons/datesheet.svg',
-                          title: 'Экзамены',
+                          icon: 'assets/icons/event.svg',
+                          title: 'Мероприятия',
                         ),
+                        // HomeCard(
+                        //   onPress: () {
+                        //     Navigator.pushNamed(
+                        //         context, DateSheetScreen.routeName);
+                        //   },
+                        //   icon: 'assets/icons/datesheet.svg',
+                        //   title: 'Экзамены',
+                        // ),
                       ],
                     ),
                     Row(
@@ -162,23 +152,8 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         HomeCard(
                           onPress: () {},
-                          icon: 'assets/icons/resume.svg',
-                          title: 'Уведомить об\nотсутствии',
-                        ),
-                        HomeCard(
-                          onPress: () {},
                           icon: 'assets/icons/lock.svg',
                           title: 'Сменить\nпароль',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/event.svg',
-                          title: 'Мероприятия',
                         ),
                         HomeCard(
                           onPress: () {},
@@ -208,6 +183,7 @@ class HomeCard extends StatelessWidget {
   final VoidCallback onPress;
   final String icon;
   final String title;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(

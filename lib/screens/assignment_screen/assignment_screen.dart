@@ -12,7 +12,7 @@ class AssignmentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Задания'),
+        title: Text('ВУЗы'),
       ),
       body: Column(
         children: [
@@ -72,28 +72,38 @@ class AssignmentScreen extends StatelessWidget {
                                 ),
                                 kHalfSizedBox,
                                 AssignmentDetailRow(
-                                  title: 'С начала: ',
+                                  title: 'С начала:',
                                   statusValue: assignment[index].assignDate,
                                 ),
                                 kHalfSizedBox,
                                 AssignmentDetailRow(
-                                  title: 'До конца: ',
+                                  title: 'До конца:',
                                   statusValue: assignment[index].lastDate,
                                 ),
                                 kHalfSizedBox,
                                 AssignmentDetailRow(
-                                  title: 'Статус',
+                                  title: 'Требуется баллов:',
+                                  statusValue: assignment[index].req,
+                                ),
+                                kHalfSizedBox,
+                                AssignmentDetailRow(
+                                  title: 'Специальности:',
+                                  statusValue: assignment[index].fac,
+                                ),
+                                kHalfSizedBox,
+                                AssignmentDetailRow(
+                                  title: 'Статус:',
                                   statusValue: assignment[index].status,
                                 ),
                                 kHalfSizedBox,
                                 //use condition here to display button
-                                if (assignment[index].status == 'Ожидание')
+                                if (assignment[index].status != 'Недоступно')
                                   //then show button
                                   AssignmentButton(
                                     onPress: () {
                                       //submit here
                                     },
-                                    title: 'Отправить',
+                                    title: 'Узнать больше',
                                   ),
                               ],
                             ),

@@ -11,7 +11,7 @@ class DateSheetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Экзамены'),
+        title: Text('Мероприятия'),
       ),
       body: Container(
         width: 100.w,
