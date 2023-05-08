@@ -21,10 +21,10 @@ class MyProfileScreen extends StatelessWidget {
               padding: EdgeInsets.only(right: kDefaultPadding / 2),
               child: Row(
                 children: [
-                  Icon(Icons.report_gmailerrorred_outlined),
+                  // Icon(Icons.report_gmailerrorred_outlined),
                   kHalfWidthSizedBox,
                   Text(
-                    'Report',
+                    'Редактировать',
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
                 ],
@@ -60,11 +60,11 @@ class MyProfileScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Aisha Mirza',
+                        'Иван Козлов',
                         style: Theme.of(context).textTheme.subtitle1,
                       ),
-                      Text('Class X-II A | Roll no: 12',
-                          style: Theme.of(context).textTheme.subtitle2),
+                      // Text('Class X-II A | Roll no: 12',
+                      //     style: Theme.of(context).textTheme.subtitle2),
                     ],
                   )
                 ],
@@ -74,42 +74,34 @@ class MyProfileScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ProfileDetailRow(
-                    title: 'Registration Number', value: '2020-ASDF-2021'),
-                ProfileDetailRow(title: 'Academic Year', value: '2020-2021'),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ProfileDetailRow(title: 'Admission Class', value: 'X-II'),
-                ProfileDetailRow(title: 'Admission Number', value: '000126'),
+                ProfileDetailRow(title: 'Выпускник', value: '2022-2023'),
+                ProfileDetailRow(title: 'Класс', value: '11'),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ProfileDetailRow(
-                    title: 'Date of Admission', value: '1 Aug, 2020'),
-                ProfileDetailRow(title: 'Date of Birth', value: '3 May 1998'),
+                    title: 'Дата выпуска', value: '25 Мая, 2022'),
+                ProfileDetailRow(title: 'Дата рождения', value: '3 Май 2006'),
               ],
             ),
             sizedBox,
             ProfileDetailColumn(
-              title: 'Email',
-              value: 'aisha12@gmail.com',
+              title: 'Почта',
+              value: 'kozlov12@gmail.com',
             ),
             ProfileDetailColumn(
-              title: 'Father Name',
-              value: 'John Mirza',
+              title: 'Отец',
+              value: 'Алексей Мирза',
             ),
             ProfileDetailColumn(
-              title: 'Mother Name',
-              value: 'Angelica Mirza',
+              title: 'Мать',
+              value: 'Елена Мирза',
             ),
             ProfileDetailColumn(
-              title: 'Phone Number',
-              value: '+923066666666',
+              title: 'Номер телефона',
+              value: '+79787777777',
             ),
           ],
         ),

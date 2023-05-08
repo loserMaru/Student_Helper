@@ -6,6 +6,9 @@ import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sizer/sizer.dart';
+import '../exam_score_screen/exam_score_screen.dart';
+import '../login_screen/login_screen.dart';
+import '../news_screen/news_screen.dart';
 import 'widgets/student_data.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         StudentName(
-                          studentName: 'абитуриент' + '!',
+                          studentName: 'Иван' + '!',
                         ), // 'Class X-II A | Roll no: 12'),
                         kHalfSizedBox,
                         StudentYear(studentYear: '2023-2024'),
@@ -55,7 +58,10 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     StudentDataCard(
                       onPress: () {
-                        //go to attendance screen
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ExamScoresScreen()),
+                        );
                       },
                       title: 'Сумма баллов\n          ЕГЭ',
                       value: '190',
@@ -100,7 +106,12 @@ class HomeScreen extends StatelessWidget {
                           title: 'Документы',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => NewsScreen()),
+                            );
+                          },
                           icon: 'assets/icons/timetable.svg',
                           title: 'Новости',
                         ),
@@ -156,7 +167,12 @@ class HomeScreen extends StatelessWidget {
                           title: 'Сменить\nпароль',
                         ),
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(builder: (context) => LoginScreen()),
+                            );
+                          },
                           icon: 'assets/icons/logout.svg',
                           title: 'Выйти',
                         ),

@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: CustomTheme().baseTheme,
         //initial route is splash screen
         //mean first screen
-        initialRoute: RegisterScreen.routeName,
+        initialRoute: SplashScreen.routeName,
         //define the routes file here in order to access the routes any where all over the app
         routes: routes,
       );

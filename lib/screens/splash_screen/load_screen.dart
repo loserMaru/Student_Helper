@@ -2,6 +2,8 @@ import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import '../register_screen/register_screen.dart';
+
 class SplashScreen extends StatefulWidget {
   //route name for our screen
   static String routeName = 'SplashScreen';
@@ -19,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 5), (){
       //no return when user is on login screen and press back, it will not return the
       //user to the splash screen
-      Navigator.pushNamedAndRemoveUntil(context, LoginScreen.routeName, (route) => false);
+      Navigator.pushNamedAndRemoveUntil(context, RegisterScreen.routeName, (route) => false);
     });
   }
   @override
