@@ -1,8 +1,9 @@
 import 'package:brain_school/constants.dart';
-import 'package:brain_school/screens/assignment_screen/data/assignment_data.dart';
+import 'package:brain_school/screens/assignment_screen/data/vuz_data.dart';
+import 'package:brain_school/screens/assignment_screen/vuz_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'widgets/assignment_widgets.dart';
+import 'widgets/vuz_widgets.dart';
 
 class AssignmentScreen extends StatelessWidget {
   const AssignmentScreen({Key? key}) : super(key: key);
@@ -101,7 +102,12 @@ class AssignmentScreen extends StatelessWidget {
                                   //then show button
                                   AssignmentButton(
                                     onPress: () {
-                                      //submit here
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                          builder: (context) => VuzDetailScreen(vuzData: assignment[index]),
+                                      ),
+                                      );
                                     },
                                     title: 'Узнать больше',
                                   ),

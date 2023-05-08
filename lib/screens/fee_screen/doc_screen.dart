@@ -1,8 +1,8 @@
 import 'package:brain_school/constants.dart';
 import 'package:flutter/material.dart';
 
-import 'data/fee_data.dart';
-import 'widgets/fee_widgets.dart';
+import 'data/doc_data.dart';
+import 'widgets/doc_widgets.dart';
 
 class FeeScreen extends StatelessWidget {
   const FeeScreen({Key? key}) : super(key: key);

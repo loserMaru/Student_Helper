@@ -1,5 +1,6 @@
 import 'package:brain_school/routes.dart';
-import 'package:brain_school/screens/splash_screen/splash_screen.dart';
+import 'package:brain_school/screens/register_screen/register_screen.dart';
+import 'package:brain_school/screens/splash_screen/load_screen.dart';
 import 'package:brain_school/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -19,11 +20,11 @@ class MyApp extends StatelessWidget {
     return Sizer(builder: (context, orientation, device){
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Student Helper',
+        title: 'Applicant Assistant',
         theme: CustomTheme().baseTheme,
         //initial route is splash screen
         //mean first screen
-        initialRoute: SplashScreen.routeName,
+        initialRoute: RegisterScreen.routeName,
         //define the routes file here in order to access the routes any where all over the app
         routes: routes,
       );

@@ -1,9 +1,10 @@
 import 'package:brain_school/screens/login_screen/login_screen.dart';
-import 'package:brain_school/screens/splash_screen/splash_screen.dart';
+import 'package:brain_school/screens/register_screen/register_screen.dart';
+import 'package:brain_school/screens/splash_screen/load_screen.dart';
 import 'package:flutter/cupertino.dart';
-import 'screens/assignment_screen/assignment_screen.dart';
-import 'screens/datesheet_screen/datesheet_screen.dart';
-import 'screens/fee_screen/fee_screen.dart';
+import 'screens/assignment_screen/vuz_screen.dart';
+import 'screens/datesheet_screen/meropr_screen.dart';
+import 'screens/fee_screen/doc_screen.dart';
 import 'screens/home_screen/home_screen.dart';
 import 'screens/my_profile/my_profile.dart';
 
@@ -16,4 +17,5 @@ Map<String, WidgetBuilder> routes = {
   FeeScreen.routeName: (context) => FeeScreen(),
   AssignmentScreen.routeName: (context) => AssignmentScreen(),
   DateSheetScreen.routeName: (context) => DateSheetScreen(),
+  RegisterScreen.routeName: (context) => RegisterScreen()
 };
